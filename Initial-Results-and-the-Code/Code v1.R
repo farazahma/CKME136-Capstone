@@ -1,11 +1,3 @@
-# Impute?
-# Tuning kNN with box cox?
-# Seed is making accuracy better.
-# How to investigate 2 incorrect FN
-## discuss TN (B) and TP (M). No cases of False Negative FN. 
-## There are 2 cases of FP - False Positive where B coming as M
-## Accuracy = TN + TP / total observaion (97+45/144) = 98.6
-## understand which column is TN, TP etc
 
 library(RCurl) 
 
