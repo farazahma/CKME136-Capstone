@@ -52,6 +52,28 @@ bc$Class <- factor(bc$Class, levels = c(2, 4), labels = c("Benign", "Malignant")
 
 str(bc)
 
+#### Data Visualization Starts
+
+# histograms each attribute 
+par(mfrow=c(3,3)) 
+for(i in 1:9) { 
+  hist(bc[,i], main=names(bc)[i]) 
+}
+
+# boxplots for each attribute 
+par(mfrow=c(3,3)) 
+for(i in 1:9) { 
+  boxplot(bc[,i], main=names(bc)[i]) 
+}
+
+# bar plots of each variable by class 
+par(mfrow=c(3,3)) 
+for(i in 1:9) 
+{ barplot(table(bc$Class,bc[,i]), main=names(bc)[i], legend.text=unique(bc$Class))
+}
+
+#### Data Visualization Ends 
+
 # To check class distribution 
 round(prop.table(table(bc$Class)) * 100, digits = 1)
 
